@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>名前を入力して表示</title>
+    <link rel="stylesheet" href="/hello.css" />
+  </head>
+
+  <body>
+    <h1>JavaScript課題2</h1>
+    <h2>名前を入力して表示させよう</h2>
+    <div class="form-group">
+      <input type="text" id="nameInput" placeholder="名前を入力してください"/>
+      <button id="saveButton">OK</button>
+    </div>
+    
+    <p id="message"></p>
+
+    <script>
+      const nameInput = document.getElementById("nameInput");
+      const saveButton = document.getElementById("saveButton");
+      const message = document.getElementById("message");
+
+      saveButton. addEventListener("click", function(){
+        const name = nameInput.value; //入力欄に書かれた文字を取ってきてnameに入れる
+        if (name==="") {
+          message.innerText = "※名前を入力してください！";
+        } else {
+          message.innerText = `こんにちは、${name}さん！`;
+        }
+      });
+    </script>
+
+  </body>
+
+</html>

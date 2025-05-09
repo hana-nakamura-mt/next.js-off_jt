@@ -1,0 +1,48 @@
+.header{
+    background-color: #E4E6E8;
+    height: 100px;
+    color: #666;
+    display: flex; /*要素の中を柔軟に配置できるモードにする*/
+    justify-content: center; /*横方向に真ん中*/
+    align-items: center; /*縦方向に真ん中*/
+}
+
+body{
+    font-family: serif;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    display:grid; /*グリッドレイアウトコンテナ*/
+    grid-template-rows: 170px 100px;
+    grid-template-columns: 300px 50px 1fr;
+    grid-template-areas:
+        "icon space name"
+        "icon space context";
+    padding: 50px;   
+    color: #666;
+}
+
+#icon{
+    grid-area: icon;
+
+}
+
+#icon img{
+border-radius:15px;
+}
+
+#name{
+    grid-name: name;
+}
+
+#context{
+    grid-area: context;
+}
+
+#space{
+    grid-area: space;
+}

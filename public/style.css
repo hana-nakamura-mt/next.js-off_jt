@@ -2,9 +2,9 @@
     background-color: #E4E6E8;
     height: 100px;
     color: #666;
-    display: flex; /*要素の中を柔軟に配置できるモードにする*/
-    justify-content: center; /*横方向に真ん中*/
-    align-items: center; /*縦方向に真ん中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
@@ -16,8 +16,7 @@ ul {
 }
 
 main {
-    display:grid; /*グリッドレイアウトコンテナ*/
-    grid-template-rows: auto auto;
+    display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas:
         "icon name"
@@ -29,20 +28,18 @@ main {
 
 #icon {
     grid-area: icon;
+}
 
+#name {
+    grid-area: name;
+}
+
+#context {
+    grid-area: context;
 }
 
 #icon img {
     border-radius:15px;
     width:200px; 
     height:280px;
-}
-
-#name {
-    grid-area: name;
-    width: 100%;
-}
-
-#context {
-    grid-area: context;
 }

@@ -15,24 +15,24 @@
     <button id="reset">リセット</button>
     
     <script>
-        let count = 0;
+        let countNumber = 0;
 
         const plusButton = document.getElementById("plus");
         plusButton.addEventListener("click", function(){
-          count += 1;
-          document.getElementById("count").textContent = count;
+          countNumber += 1;
+          document.getElementById("count").textContent = countNumber;
         });
 
         const minusButton = document.getElementById("minus");
         minusButton.addEventListener("click", function(){
-          count -= 1;
-          document.getElementById("count").textContent = count;
+          countNumber -= 1;
+          document.getElementById("count").textContent = countNumber;
         });
 
         const resetButton = document.getElementById("reset");
         resetButton.addEventListener("click", function(){
-          count = 0;
-          document.getElementById("count").textContent = count;
+          countNumber = 0;
+          document.getElementById("count").textContent = countNumber;
         });
     </script>
     

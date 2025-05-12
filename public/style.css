@@ -1,4 +1,4 @@
-.header{
+.header {
     background-color: #E4E6E8;
     height: 100px;
     color: #666;
@@ -7,7 +7,7 @@
     align-items: center; /*縦方向に真ん中*/
 }
 
-body{
+body {
     font-family: serif;
 }
 
@@ -15,34 +15,34 @@ ul {
     list-style: none;
 }
 
-#container {
+main {
     display:grid; /*グリッドレイアウトコンテナ*/
-    grid-template-rows: 170px 100px;
-    grid-template-columns: 300px 50px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 2fr;
     grid-template-areas:
-        "icon space name"
-        "icon space context";
+        "icon name"
+        "icon context";
+    column-gap: 20px;
     padding: 50px;   
     color: #666;
 }
 
-#icon{
+#icon {
     grid-area: icon;
 
 }
 
-#icon img{
-border-radius:15px;
+#icon img {
+    border-radius:15px;
+    width:200px; 
+    height:280px;
 }
 
-#name{
-    grid-name: name;
+#name {
+    grid-area: name;
+    width: 100%;
 }
 
-#context{
+#context {
     grid-area: context;
-}
-
-#space{
-    grid-area: space;
 }

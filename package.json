@@ -28,7 +28,7 @@
 		"@testing-library/react": "^16.2.0",
 		"@testing-library/user-event": "^14.6.1",
 		"@types/jest": "^29.5.14",
-		"@types/node": "^20",
+		"@types/node": "^20.17.25",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"@vitejs/plugin-react": "^4.3.4",
@@ -46,6 +46,10 @@
 	},
 	"packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af",
 	"pnpm": {
-		"ignoredBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
+		"ignoredBuiltDependencies": [
+			"@biomejs/biome",
+			"esbuild",
+			"sharp"
+		]
 	}
 }

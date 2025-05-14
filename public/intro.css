@@ -21,8 +21,8 @@ main {
     grid-template-areas:
         "icon name"
         "icon context";
-    column-gap: 20px;
-    padding: 50px;   
+    column-gap: 10px;
+    padding: 150px;   
     color: #666;
 }
 

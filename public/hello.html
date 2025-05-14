@@ -16,22 +16,7 @@
     </div>
     
     <p id="message"></p>
-
-    <script>
-      const nameInput = document.getElementById("nameInput");
-      const saveButton = document.getElementById("saveButton");
-      const message = document.getElementById("message");
-
-      saveButton. addEventListener("click", function(){
-        const name = nameInput.value; //入力欄に書かれた文字を取ってきてnameに入れる
-        if (name==="") {
-          message.innerText = "※名前を入力してください！";
-        } else {
-          message.innerText = `こんにちは、${name}さん！`;
-        }
-      });
-    </script>
-
+		
+    <script src="./js/hello.js"></script>
   </body>
-
 </html>

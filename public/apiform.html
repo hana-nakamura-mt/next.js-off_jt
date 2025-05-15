@@ -1,89 +1,46 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>フォームとAPI連携課題1</title>
-		<link rel="stylesheet" href="/apiform.css"/>
-	</head>
 
-  <body>
-    <h1>フォームとAPI連携課題1</h1>
+<head>
+  <meta charset="UTF-8" />
+  <title>フォームとAPI連携課題1</title>
+  <link rel="stylesheet" href="/apiform.css" />
+</head>
 
-    <section class="form">
-      <form>
-        <label for ="username">名前</label>
-        <input type="text" id="username" name = "username"/>
+<body>
+  <h1>フォームとAPI連携課題1</h1>
 
-        <label for ="age">年齢</label>
-        <input type="text" id="age" name = "age"/>
+  <section class="form">
+    <form>
+      <label for="username">名前</label>
+      <input type="text" id="username" name="username" />
 
-        <label for ="job">職業</label>
-        <select id="job" name="job">
-          <option value="default">-</option>
-          <option value="company-worker">会社員</option>
-          <option value="civil-servant">公務員</option>
-          <option value="self-employed">自営業/個人営業</option>
-          <option value="executive">会社役員</option>
-          <option value="freelancer">自由業</option>
-          <option value="homemaker">専業主婦・主夫</option>
-          <option value="student">学生</option>
-          <option value="part-time">アルバイト/パート</option>
-          <option value="unemployed">無職</option>
-          <option value="other">その他</option>
-        </select>
+      <label for="age">年齢</label>
+      <input type="text" id="age" name="age" />
 
-        <label for ="profile">自己紹介</label>
-        <textarea id="profile" name = "profile"></textarea>
+      <label for="job">職業</label>
+      <select id="job" name="job">
+        <option value="default">-</option>
+        <option value="company-worker">会社員</option>
+        <option value="civil-servant">公務員</option>
+        <option value="self-employed">自営業/個人営業</option>
+        <option value="executive">会社役員</option>
+        <option value="freelancer">自由業</option>
+        <option value="homemaker">専業主婦・主夫</option>
+        <option value="student">学生</option>
+        <option value="part-time">アルバイト/パート</option>
+        <option value="unemployed">無職</option>
+        <option value="other">その他</option>
+      </select>
 
-        <button type = "submit">送信</button>
-      </form>
-    </section>
+      <label for="profile">自己紹介</label>
+      <textarea id="profile" name="profile"></textarea>
 
-    <script>
-      const form = document.querySelector("form");
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
+      <button type="submit">送信</button>
+    </form>
+  </section>
 
-        const errors =[];
-
-        const usernameInput = document.getElementById("username");
-        const usernameValue = usernameInput.value;
-        if (usernameValue.trim() === "") {
-          errors.push("※名前を入力してください");
-        }
-
-        const ageInput = document.getElementById("age");
-        const ageValue = ageInput.value;
-        if (ageValue==="" || isNaN(ageValue) || ageValue < 18) {
-          errors.push("※年齢は18歳以上(半角数字)で入力してください");
-        }
-
-        const jobInput = document.getElementById("job");
-        const jobValue = jobInput.value;
-        if (jobValue === "default") {
-          errors.push("※職業を選択してください");
-        }
-
-        const profileInput = document.getElementById("profile");
-        const profileValue = profileInput.value;
-        if (profileValue.trim() === "") {
-          errors.push("※自己紹介を入力してください");
-        }
-
-        if (errors.length > 0) {
-          alert(errors.join("\n"));
-          return;
-        }
-
-        const data = {
-          username: usernameValue,
-          age: ageValue,
-          job: jobValue,
-          profile: profileValue
-        }
-        console.log(JSON.stringify(data, null, 2));
-      });
-    </script>
-  </body>
+  <script src="apiform.js"></script>
+</body>
 
 </html>

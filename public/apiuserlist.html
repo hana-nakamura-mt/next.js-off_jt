@@ -1,35 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>フォームとAPI連携課題2</title>
-		<link rel="stylesheet" href="/userlist.css"/>
-	</head>
 
-	<body>
-		<h1>フォームとAPI連携課題2</h1>
-		<ul id="userList"></ul>
-		<p id="status">読み込み中…</p>
+<head>
+  <meta charset="UTF-8" />
+  <title>フォームとAPI連携課題2</title>
+  <link rel="stylesheet" href="/userlist.css" />
+</head>
 
-		<script>
-			fetch("https://jsonplaceholder.typicode.com/users")
-				.then((res)=> res.json())
-				.then((users) => {
-					const userList = document.getElementById("userList");
-					const status = document.getElementById("status");
-					status.textContent = "";
-
-					users.forEach(user => {
-						const li = document.createElement("li");
-						li.textContent = user.name;
-						userList.appendChild(li);
-					});
-				})
-
-				.catch((error) => {
-					const status = document.getElementById("status");
-					status.textContent = "データの取得に失敗しました";
-					console.error(error);
-				});
-		</script>
-	</body>
+<body>
+  <h1>フォームとAPI連携課題2</h1>
+  <ul id="userList"></ul>
+  <p id="status">読み込み中…</p>
+  <script src="apiuserlist.js"></script>
+</body>

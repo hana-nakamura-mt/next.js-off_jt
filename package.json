@@ -29,7 +29,7 @@
 		"@testing-library/react": "^16.2.0",
 		"@testing-library/user-event": "^14.6.1",
 		"@types/jest": "^29.5.14",
-		"@types/node": "^20",
+		"@types/node": "^20.17.25",
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"@vitejs/plugin-react": "^4.3.4",
@@ -46,6 +46,10 @@
 		"vitest": "^3.0.9"
 	},
 	"pnpm": {
-		"ignoredBuiltDependencies": ["@biomejs/biome", "esbuild", "sharp"]
+		"ignoredBuiltDependencies": [
+			"@biomejs/biome",
+			"esbuild",
+			"sharp"
+		]
 	}
 }

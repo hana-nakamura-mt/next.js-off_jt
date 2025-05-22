@@ -1,8 +1,8 @@
+import Link from "next/link";
+
 export const metadata = {
 	title: "一覧ページ | App Router課題",
 };
-
-import Link from "next/link";
 
 const memos = [
 	{ id: "1", title: "西島隆弘" },

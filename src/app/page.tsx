@@ -1,8 +1,8 @@
+import Link from "next/link";
+
 export const metadata = {
 	title: "トップページ | 課題サイト",
 };
-
-import Link from "next/link";
 
 export default function TopPage() {
 	return (

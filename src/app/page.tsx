@@ -1,15 +1,9 @@
-import { LikeButton } from "./components/LikeButton";
-
-export default function Page() {
-  const today = new Date().toLocaleDateString();
-
+export default function TopPage() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <div className="text-center space-y-4">
-        <h1 className="text-2xl font-bold">こんにちは！</h1>
-        <p className="text-lg">今日は{today}です</p>
-        <LikeButton />
-      </div>
-    </main>
+    <div className="space-y-8">
+      <h1 className="text-3xl font-bold">カフェのホームページ</h1>
+      <p>ようこそ！</p>
+      <p>季節のおすすめ：杏仁豆腐フラペチーノ</p>
+    </div>
   );
 }

@@ -1,24 +1,15 @@
-import Link from "next/link";
+import { LikeButton } from "./components/LikeButton";
 
-export const metadata = {
-	title: "トップページ | 課題サイト",
-};
+export default function Page() {
+  const today = new Date().toLocaleDateString();
 
-export default function TopPage() {
-	return (
-		<main className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-			<div className="bg-white p-10 rounded-xl shadow-md max-w-xl w-full space-y-6">
-				<h1 className="text-3xl font-bold text-gray-800">App Router課題</h1>
-				<div className="space-y-2">
-					<p className="text-gray-600">ようこそ！</p>
-					<Link
-						href="/memos"
-						className="block text-blue-600 hover:underline text-lg"
-					>
-						一覧ページ
-					</Link>
-				</div>
-			</div>
-		</main>
-	);
+  return (
+    <main className="min-h-screen flex items-center justify-center">
+      <div className="text-center space-y-4">
+        <h1 className="text-2xl font-bold">こんにちは！</h1>
+        <p className="text-lg">今日は{today}です</p>
+        <LikeButton />
+      </div>
+    </main>
+  );
 }

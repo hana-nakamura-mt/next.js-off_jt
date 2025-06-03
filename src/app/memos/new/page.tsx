@@ -68,10 +68,3 @@ export default function Home() {
     </main>
   );
 }
-
-// z.object({ title: ..., content: ... }) 形式でスキーマ定義
-//バリデーションエラーがあれば <p> で画面に表示
-//成功時には「登録完了」のメッセージを表示
-//見た目はシンプルでOK（Tailwindを使っても◎）
-//Zod の .min(length) や .optional() を活用
-//handleSubmit(onValid, onInvalid) を使えば成功／失敗で処理を分けられる

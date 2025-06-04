@@ -1,5 +1,4 @@
 "use client";
-import { resetClipboardStubOnView } from "@testing-library/user-event/dist/cjs/utils/index.js";
 import { useForm } from "react-hook-form";
 
 type FormValues = {
